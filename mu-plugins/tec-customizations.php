@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: The Events Calendar Customizations
-Description: An assortment of changes to how The Events Calendar behaves.
+Description: An assortment of changes to how The Events Calendar behaves. You are encouraged to delete, add, and revise this file to meet your needs!
 Version: 2.0.1
 Author: Mark Root-Wiley, MRW Web Design
 Author URI: https://MRWweb.com
-Plugin URI: https://gist.github.com/mrwweb/6f5ba48873d9bd24dfc23eed7ad934df#file-tec-customizations-php
+Plugin URI: https://github.com/mrwweb/the-events-calendar-reset
 */
 
 namespace MRW\TEC;
