@@ -1,0 +1,193 @@
+/**
+ * The Events Calendar v2 Design Style Resets & Fixes
+ * Version: 2.0.1
+ * Details: https://gist.github.com/mrwweb/6f5ba48873d9bd24dfc23eed7ad934df
+ *
+ * # How to use this file
+ *
+ * Set these values to make TEC use your theme's styles
+ *
+ * Note: If you're using SASS variables to fill these in, do so like this: #{$variable}
+ * Note about note: The variable reference on the previous line may prevent compiling sass. Remove it once you're done with it.
+ */
+:root {
+    --tec-heading-font: var(--tec-font-family-sans-serif);
+    --tec-heading-weight: 700;
+    --tec-heading-2-size: var(--wp--preset--font-size--x-large, var(--tec-font-size-9));
+    --tec-heading-3-size: var(--wp--preset--font-size--large, var(--tec-font-size-6));
+}
+
+/* Remove Excessive extra padding */
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+    padding: 0;
+}
+
+/* Reset Font Size & Line-height */
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-c-breadcrumbs__list,
+.tribe-events .datepicker .month,
+.tribe-events .datepicker .year,
+.tribe-events-schedule__all-day,
+.tribe-events-schedule__separator,
+.tribe-events-schedule__timezone,
+.tribe-events-meta-group .tribe-events-single-section-title,
+.tribe-common .tribe-common-b1,
+.tribe-common .tribe-common-b2,
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-b2,
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-b1--min-medium,
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-b2--min-medium,
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-b3--min-medium,
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-h6--min-medium,
+.tribe-common .tribe-common-cta,
+.tribe-common .tribe-events-c-top-bar__datepicker-button.tribe-common-h3 {
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+/* Inherit Font Family rather than using Helvetica */
+.tribe-events .datepicker .month,
+.tribe-events .datepicker .year,
+.tribe-common .tribe-common-form-control-checkbox__label,
+.tribe-common .tribe-common-form-control-radio__label,
+.tribe-common .tribe-common-form-control-slider__label,
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-form-control-text__input,
+.tribe-common .tribe-common-form-control-text__input,
+#top .main_color .tribe-common .tribe-common-form-control-text__input,
+#top.tribe-theme-enfold .tribe-common .tribe-common-form-control-text__input,
+#top .main_color .tribe-common.tribe-common--breakpoint-medium .tribe-common-form-control-text__input,
+#top.tribe-theme-enfold .tribe-common.tribe-common--breakpoint-medium .tribe-common-form-control-text__input,
+.tribe-common .tribe-common-form-control-toggle__label,
+.tribe-common .tribe-common-cta,
+.tribe-common .tribe-common-b1,
+.tribe-common .tribe-common-b2,
+.tribe-common .tribe-common-b3,
+.tribe-events .tribe-events-calendar-month__calendar-event-datetime,
+.tribe-events .tribe-events-calendar-list__event-date-tag-weekday,
+.tribe-common .tribe-common-c-btn,
+.tribe-common a.tribe-common-c-btn,
+.tribe-common .tribe-common-c-btn-border-small,
+.tribe-common a.tribe-common-c-btn-border-small {
+    font-family: inherit;
+}
+
+/* Set Heading Font Family & Weight */
+h2.tribe-events-schedule__datetime,
+.single-tribe_events .tribe-events-schedule h2 *,
+.tribe-common .tribe-common-h1,
+.tribe-common .tribe-common-h2,
+.tribe-common .tribe-common-h3,
+.tribe-common .tribe-common-h4,
+.tribe-common .tribe-common-h5,
+.tribe-common .tribe-common-h6,
+.tribe-common .tribe-common-h7,
+.tribe-common .tribe-common-h8,
+.tribe-events-calendar-latest-past__event-datetime,
+.tribe-events-calendar-list__event-datetime,
+.tribe-events-meta-group .tribe-events-single-section-title {
+    font-family: var(--tec-heading-font);
+    font-weight: var(--tec-heading-weight);
+}
+
+/* Style List Month Separator like Heading 2 */
+:root .tribe-common .tribe-common-h6--min-medium.tribe-events-calendar-list__month-separator-text {
+    font-size: var(--tec-heading-2-size);
+    font-family: var(--tec-heading-font);
+    font-weight: var(--tec-heading-weight);
+}
+
+/* Fix Hard-coded Heading Sizes */
+:root .tribe-block__venue .tribe-block__venue__meta .tribe-block__venue__name h3 {
+    font-size: var(--tec-heading-3-size);
+}
+
+/* Don't put box around Date/Time Block on Mobile */
+@media (max-width:768px) {
+    .single-tribe_events .tribe-events-schedule {
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+    }
+}
+
+/**
+ * Links & Buttons
+ */
+.tribe-events-content a,
+.tribe-common a,
+#tribe-events-content a,
+.tribe-common .tribe-common-c-svgicon {
+    border-bottom: 0;
+
+    &,
+    &:active,
+    &:visited {
+        text-decoration: underline;
+    }
+
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.tribe-common .tribe-common-anchor-thin,
+.tribe-common .tribe-common-anchor-thin-alt {
+
+    &,
+    &:hover,
+    &:focus {
+        border-bottom: 0;
+    }
+}
+
+.tribe-common .tribe-common-c-btn,
+.tribe-common a.tribe-common-c-btn {
+    background-color: var(--tec-color-link-primary);
+
+    &:hover,
+    &:focus {
+        background-color: var(--tec-color-link-primary);
+        filter: brightness(1.2);
+    }
+}
+
+.tribe-events .tribe-events-c-ical__link {
+    border-color: var(--tec-color-link-primary);
+    color: var(--tec-color-link-primary);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        background-color: var(--tec-color-link-primary);
+        border: 1px solid var(--tec-color-link-primary);
+    }
+}
+
+/**
+ * Subscribe Button
+ */
+/* Drop-down options should not take up space and expand container height */
+.tribe-events-c-subscribe-dropdown__content {
+    position: absolute;
+}
+
+/**
+ * List View
+ */
+
+/* Fix Featured Things That Should Have Accent Color */
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-latest-past__event-datetime-featured-text {
+    color: var(--tec-color-accent-primary);
+}
+
+.tribe-events .tribe-events-calendar-latest-past__event-row--featured .tribe-events-calendar-latest-past__event-date-tag-datetime::after {
+    background-color: var(--tec-color-accent-primary);
+}
+
+/**
+ * Month View
+ */
+/* Don't show disabled paging links */
+.tribe-events-c-nav__list [disabled] {
+    display: none;
+}

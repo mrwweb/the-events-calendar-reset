@@ -1,0 +1,142 @@
+/**
+ * The Events Calendar v2 Design Style Resets & Fixes
+ * Version: 2.0.1
+ * Details: https://gist.github.com/mrwweb/6f5ba48873d9bd24dfc23eed7ad934df
+ *
+ * # What this file does
+ *
+ * This file remaps a number of TEC custom properties to use equivalent default values from WordPress.
+ * This will give your site consistent colors, spacing, font sizing, etc. based on common theme.json properties.
+ * Fallbacks to the original TEC values are always provided, so there will always be a valid property value.
+ *
+ * # How to use this file
+ *
+ * 1. Review the "REMAP" sections. You may need to update custom property names to match your theme.json. Better yet, try to follow theme.json color/size conventions so this file "just works".
+ *
+ * 2. Review the "OPTIONAL" sections. Either customize the custom properties to match your them -OR- delete these sections. Why delete? Because they are the default TEC values and so are unnecessary.
+ */
+body {
+    /* REMAP base colors to WP presets */
+    --tec-color-background: var(--wp--preset--color--background, #fff);
+    --tec-color-text-primary: var(--wp--preset--color--foreground, #141827);
+    --tec-color-accent-primary: var(--wp--preset--color--primary, #334aff);
+    --tec-color-link-primary: var(--wp--preset--color--primary, var(--tec-color-text-primary));
+    --tec-color-accent-primary-hover: var(--wp--preset--color--accent, rgba(51, 74, 255, .8));
+    --tec-color-accent-primary-active: var(--wp--preset--color--accent, rgba(51, 74, 255, .8));
+
+    /* OPTIONAL additional colors (showing TEC defaults) */
+    --tec-color-accent-primary-background: rgba(51, 74, 255, .07);
+    --tec-color-accent-secondary: #141827;
+    --tec-color-accent-secondary-hover: rgba(20, 24, 39, .8);
+    --tec-color-accent-secondary-active: rgba(20, 24, 39, .9);
+    --tec-color-accent-secondary-background: rgba(20, 24, 39, .07);
+
+    --tec-color-link-accent-hover: rgba(51, 74, 255, .8);
+
+    --tec-color-background-events: transparent;
+    --tec-color-background-transparent: hsla(0, 0%, 100%, .6);
+    --tec-color-background-secondary: #f7f6f6;
+    --tec-color-background-messages: rgba(20, 24, 39, .07);
+    --tec-color-background-secondary-hover: #f0eeee;
+    --tec-color-background-error: rgba(218, 57, 77, .08);
+
+    --tec-color-text-primary-light: rgba(20, 24, 39, .62);
+    --tec-color-text-secondary: #5d5d5d;
+    --tec-color-text-disabled: #d5d5d5;
+
+    /* OPTIONAL border radius (showing TEC defaults) */
+    --tec-border-radius-default: 4px;
+
+    /* Remap font sizes to WP presets */
+    /* Note: type scale is slightly collapsed to accommodate the number of default spacing presets along with some calculations to interpolate sizes */
+    /* You are strongly encouraged to define font-sizes in ems or rems for better accessibility! */
+    --tec-font-size-0: calc(var(--wp--preset--font-size--small, 14px) - 3px);
+    --tec-font-size-1: calc(var(--wp--preset--font-size--small, 14px) - 2px);
+    --tec-font-size-2: var(--wp--preset--font-size--small, 14px);
+    --tec-font-size-3: var(--wp--preset--font-size--normal, 16px);
+    --tec-font-size-4: var(--wp--preset--font-size--medium, 18px);
+    --tec-font-size-5: var(--wp--preset--font-size--medium, 20px);
+    --tec-font-size-6: var(--wp--preset--font-size--medium, 22px);
+    --tec-font-size-7: calc(var(--wp--preset--font-size--medium, 20px) + 4px);
+    --tec-font-size-8: var(--wp--preset--font-size--large, 28px);
+    --tec-font-size-9: var(--wp--preset--font-size--large, 32px);
+    --tec-font-size-10: var(--wp--preset--font-size--x-large, 42px);
+
+    /* OPTIONAL Typography (showing TEC defaults) */
+    --tec-font-family-sans-serif: "Helvetica Neue", Helvetica, -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+
+    --tec-font-weight-regular: 400;
+    --tec-font-weight-bold: 700;
+
+    --tec-line-height-0: 1.38;
+    --tec-line-height-1: 1.42;
+    --tec-line-height-2: 1.5;
+    --tec-line-height-3: 1.62;
+
+    /* REMAP spacing to WP presets */
+    /* Note: spacing scale is slightly collapsed to accommodate the number of default spacing presets */
+    --tec-spacer-0: var(--wp--preset--spacing--10, calc(var(--wp--preset--spacing--20) / 2), 4px);
+    --tec-spacer-1: var(--wp--preset--spacing--20, 8px);
+    --tec-spacer-2: var(--wp--preset--spacing--30, 12px);
+    --tec-spacer-3: var(--wp--preset--spacing--40, 16px);
+    --tec-spacer-4: var(--wp--preset--spacing--40, 20px);
+    --tec-spacer-5: var(--wp--preset--spacing--50, 24px);
+    --tec-spacer-6: var(--wp--preset--spacing--50, 28px);
+    --tec-spacer-7: var(--wp--preset--spacing--60, 32px);
+    --tec-spacer-8: var(--wp--preset--spacing--60, 40px);
+    --tec-spacer-9: var(--wp--preset--spacing--70, 48px);
+    --tec-spacer-10: var(--wp--preset--spacing--70, 56px);
+    --tec-spacer-11: calc((var(--wp--preset--spacing--70, 56px) + var(--wp--preset--spacing--80, 80px)) / 2);
+    /* Average of 70 and 80 */
+    --tec-spacer-12: var(--wp--preset--spacing--80, 80px);
+    --tec-spacer-13: var(--wp--preset--spacing--90, calc(var(--wp--preset--spacing--80, 80px) * 1.2));
+    --tec-spacer-14: var(--wp--preset--spacing--100, calc(var(--wp--preset--spacing--80, 80px) * 2));
+
+    /* REMAP gutters to WP presets */
+    --tec-grid-gutter: var(--wp--style--block-gap, 48px);
+    --tec-grid-gutter-small: var(--wp--style--block-gap, 42px);
+    /* You probably want to adjust the small size, they're the same otherwise */
+    --tec-grid-gutter-page: var(--wp--style--block-gap, var(--tec-grid-gutter-small));
+    --tec-grid-gutter-page-small: calc(var(--tec-grid-gutter-page) / 2);
+
+    /* REMAP Layout sizes */
+    --tec-grid-width-default: var(--wp--style--global--wide-size, 1176px);
+
+    /* OPTIONAL shadows (showing TEC defaults) */
+    --tec-color-box-shadow: rgba(0, 0, 0, .14);
+    --tec-color-box-shadow-secondary: rgba(0, 0, 0, .1);
+    --tec-box-shadow-default: 0 2px 5px 0 var(--tec-color-box-shadow);
+    --tec-box-shadow-tooltip: 0 2px 12px 0 var(--tec-color-box-shadow);
+    --tec-box-shadow-card: 0 1px 6px 2px var(--tec-color-box-shadow);
+    --tec-box-shadow-multiday: 16px 6px 6px -2px var(--tec-color-box-shadow-secondary);
+
+    /* REMAP Icon Colors to WP presets */
+    --tec-color-icon-primary: var(--wp--preset--color--primary, #5d5d5d);
+
+    /* OPTIONAL Icon Colors (showing TEC defaults) */
+    --tec-color-icon-primary-alt: #757575;
+    --tec-color-icon-secondary: #bababa;
+    --tec-color-icon-active: #141827;
+    --tec-color-icon-disabled: #d5d5d5;
+    --tec-color-icon-focus: #334aff;
+    --tec-color-icon-error: #da394d;
+    --tec-color-event-icon: #141827;
+    --tec-color-event-icon-hover: #334aff;
+
+    /* OPTIONAL border colors (showing TEC defaults) */
+    --tec-color-border-default: #d5d5d5;
+    --tec-color-border-secondary: #e4e4e4;
+    --tec-color-border-tertiary: #7d7d7d;
+    --tec-color-border-hover: #5d5d5d;
+    --tec-color-border-active: #141827;
+
+    /* OPTIONAL transitions (showing TEC defaults customized for easier modification) */
+    --my-transition-timing: 0.2s;
+    --tec-transition: all var(--my-transition-timing) ease;
+    --tec-transition-background-color: background-color var(--my-transition-timing) ease;
+    --tec-transition-color-border-color: color 0.2s ease, border-color var(--my-transition-timing) ease;
+    --tec-transition-transform: transform var(--my-transition-timing) ease;
+    --tec-transition-border-color: border-color var(--my-transition-timing) ease;
+    --tec-transition-color: color var(--my-transition-timing) ease;
+    --tec-transition-opacity: opacity var(--my-transition-timing) ease;
+}
