@@ -78,10 +78,10 @@ add_action( 'tribe_template_before_include:events/v2/components/events-bar/views
 ## Changlog
 
 ### 2.1.0 (May 18, 2023)
-- This is not a git repository rather than a gist!
-- Rename css files for clarity
+- This is now a Github repository rather than a gist!
+- Rename CSS files for clarity
 - Provide fallbacks for custom properties in `tec-inherit-values.css`
-- Split examples into separate files
+- Split examples into separate files in new examples folder
 - Add `CONTRIBUTING.md`
 
 
