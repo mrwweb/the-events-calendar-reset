@@ -1,6 +1,6 @@
 # The Events Calendar v2 Template Reset & Customization Guide
 
-Version: 2.0.1!
+Version: 2.0.2!
 [Changelog](#changlog)
 
 [Feeback encouraged!](https://mrwweb.com/contact/)
