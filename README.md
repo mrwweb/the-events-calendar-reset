@@ -79,6 +79,7 @@ add_action( 'tribe_template_before_include:events/v2/components/events-bar/views
 
 ### 2.0.2 (June 7, 2023)
 
+- New function in mu-plugin to replace wrapping `section` with a `div` for better semantics
 - Move custom properties in `_tec-inherit-values.css` to the `body` instead of `:root` so they have access to `theme.json` values set on `body`
 - Make sure the datetime block children inherit `font-size` from the body (or block parent)
 - Replace hard-coded namespace with `__NAMESPACE__` to avoid problem when changing namespace

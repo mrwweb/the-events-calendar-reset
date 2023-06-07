@@ -41,6 +41,14 @@ function is_tribe_view() {
 		is_singular( 'tribe_events' );
 }
 
+/**
+ * Replace the wrapping <section> element surrounding all output with a <div>
+ */
+add_filter( 'tribe_events_views_v2_bootstrap_html', __NAMESPACE__ . '\replace_section_with_div' );
+function replace_section_with_div( $html ) {
+	return str_replace( '<section', '<div', str_replace( '</section>', '</div>', $html ) );
+}
+
 add_filter( 'tribe_events_editor_default_template', __NAMESPACE__ . '\default_blocks', 11 );
 /**
  * Change default blocks when creating a new event with the Block Editor
