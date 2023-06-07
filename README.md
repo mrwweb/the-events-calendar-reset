@@ -90,7 +90,7 @@ add_action( 'tribe_template_before_include:events/v2/components/events-bar/views
 - This is now a git repository rather than a gist!
 - Rename css files for clarity
 - Provide fallbacks for custom properties in `tec-inherit-values.css`
-- Split examples into separate files
+- Split examples into separate files in new examples folder
 - Add `CONTRIBUTING.md`
 
 ### 2.0.0 (May 02, 2023)
