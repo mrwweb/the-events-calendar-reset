@@ -1,3 +1,5 @@
+# Contributing to "The Events Calendar Reset"
+
 Thanks for your interest in contributing! I would love for your ideas, feedback, and additions!
 
 ## Please open issue before PR
@@ -10,4 +12,3 @@ This project is already much bigger than I wished it were, so I hope to keep it 
 
 - Suggest new block template examples with interesting layouts
 - Help me keep us with TEC's evolving CSS if there are old selectors that can be removed or new selectors that need to be added
-

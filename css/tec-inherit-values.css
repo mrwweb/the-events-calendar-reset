@@ -1,6 +1,6 @@
 /**
  * The Events Calendar v2 Design Style Resets & Fixes
- * Version: 2.0.1
+ * Version: 2.0.2
  * Details: https: //github.com/mrwweb/the-events-calendar-reset
  *
  * # How to use this file
@@ -10,7 +10,7 @@
  * Note: If you're using SASS variables to fill these in, do so like this: #{$variable}
  * Note about note: The variable reference on the previous line may prevent compiling sass. Remove it once you're done with it.
  */
-:root {
+body {
     --tec-heading-font: var(--tec-font-family-sans-serif);
     --tec-heading-weight: 700;
     --tec-heading-2-size: var(--wp--preset--font-size--x-large, var(--tec-font-size-9));
@@ -38,7 +38,9 @@
 .tribe-common--breakpoint-medium.tribe-common .tribe-common-b3--min-medium,
 .tribe-common--breakpoint-medium.tribe-common .tribe-common-h6--min-medium,
 .tribe-common .tribe-common-cta,
-.tribe-common .tribe-events-c-top-bar__datepicker-button.tribe-common-h3 {
+.tribe-common .tribe-events-c-top-bar__datepicker-button.tribe-common-h3,
+.tribe-events-schedule__date,
+.tribe-events-schedule__time {
     font-size: inherit;
     line-height: inherit;
     color: inherit;
@@ -100,6 +102,9 @@ h2.tribe-events-schedule__datetime,
     font-size: var(--tec-heading-3-size);
 }
 
+/**
+ * Remove Bespoke Extra Styles
+ */
 /* Don't put box around Date/Time Block on Mobile */
 @media (max-width:768px) {
     .single-tribe_events .tribe-events-schedule {
@@ -107,6 +112,23 @@ h2.tribe-events-schedule__datetime,
         background-color: transparent;
         border: 0;
     }
+}
+
+/* Remove border and padding above various blocks */
+.tribe-block__venue,
+.events-list #tribe-events-footer,
+.single-tribe_events #tribe-events-footer,
+.tribe-events-day #tribe-events-footer,
+.tribe-events-map #tribe-events-footer,
+.tribe-events-photo #tribe-events-footer {
+    border-top: 0;
+    padding-top: 0;
+}
+
+/* Remove border and padding above venue block */
+.tribe-block__venue {
+    border-top: 0;
+    padding-top: 0;
 }
 
 /**

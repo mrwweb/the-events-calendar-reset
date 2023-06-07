@@ -2,7 +2,7 @@
 /*
 Plugin Name: The Events Calendar Customizations
 Description: An assortment of changes to how The Events Calendar behaves. You are encouraged to delete, add, and revise this file to meet your needs!
-Version: 2.0.1
+Version: 2.0.2
 Author: Mark Root-Wiley, MRW Web Design
 Author URI: https://MRWweb.com
 Plugin URI: https://github.com/mrwweb/the-events-calendar-reset
@@ -81,7 +81,7 @@ function tribe_past_reverse_chronological_v2( $template_vars ) {
 	return $template_vars;
 }
 
-add_filter( 'get_the_archive_title', 'MRW\TEC\archive_title' );
+add_filter( 'get_the_archive_title', __NAMESPACE__ . '\archive_title' );
 /**
  * Change "Events" to "Upcoming Events"/"Past Events" for List/Month/Day page
  *
