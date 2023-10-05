@@ -22,6 +22,10 @@ body {
     --tec-color-accent-primary: var(--wp--preset--color--primary, #334aff);
     --tec-color-link-primary: var(--wp--preset--color--primary, var(--tec-color-text-primary));
     --tec-color-accent-primary-hover: var(--wp--preset--color--accent, rgba(51, 74, 255, .8));
+    --tec-color-button-primary: var(
+		--wp--preset--color--primary,
+		var(--tec-color-text-primary)
+	);
     --tec-color-accent-primary-active: var(--wp--preset--color--accent, rgba(51, 74, 255, .8));
     --tec-color-link-accent: var(--wp--preset--color--primary);
 	--tec-color-link-accent-hover: var(--wp--preset--color--primary,  rgba(51,74,255,.8));
