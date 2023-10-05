@@ -78,6 +78,9 @@ add_action( 'tribe_template_before_include:events/v2/components/events-bar/views
 
 ### 2.1.0 (October 5, 2023)
 
+- Better defaults and cleaner styles for Datetime, Price, Venue, and Organizer blocks
+- Style notices with existing TEC custom properties that aren't used for some reason
+- Remove SASS nesting so this can be used as plain CSS if desired
 - Remove `post_tag` taxonomy from events and don't know tribe_events posts in Tag archives
 - Add new custom properties in attempt to prevent "flash of TEC blue" links and buttons
 - Change the organizer link text to the organizer's name
