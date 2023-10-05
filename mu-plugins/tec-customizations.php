@@ -49,6 +49,38 @@ function replace_section_with_div( $html ) {
 	return str_replace( '<section', '<div', str_replace( '</section>', '</div>', $html ) );
 }
 
+add_filter( 'tribe_get_organizer_website_link_label', __NAMESPACE__ . '\return_organizer_name', 99 );
+/**
+ * Use Organizer name for Event Organizer Website Link
+ */
+function return_organizer_name() {
+	return tribe_get_organizer();
+}
+
+add_filter( 'register_tribe_events_post_type_args', __NAMESPACE__ . '\no_tags_on_events' );
+/**
+ * Remove post_tag from tribe_events post_type
+ */
+function no_tags_on_events( $args ) {
+    $args['taxonomies'] = [];
+
+    return $args;
+}
+
+add_action( 'pre_get_posts', __NAMESPACE__ . '\no_events_in_tag_archives' );
+/**
+ * Exclude tribe_events posts from tag archives
+ */
+function no_events_in_tag_archives( $query ) {
+	if( ! is_admin() && ! $query->is_main_query() ) {
+		return;
+	}
+
+	if( is_tag() ) {
+		$query->set( 'post_type', [ 'post' ] );
+	}
+}
+
 add_filter( 'tribe_events_editor_default_template', __NAMESPACE__ . '\default_blocks', 11 );
 /**
  * Change default blocks when creating a new event with the Block Editor
