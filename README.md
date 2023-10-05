@@ -28,27 +28,26 @@ There are two complimentary stylesheets so that TEC inherits and uses more theme
 - [ ] Use `css/tec-inherit-values.scss` reset stylesheet below to get rid of numerous hard-coded values and inherit more theme styles
   - [ ] Optionally set CSS properties to match theme font sizes and colors
 - [ ] Add custom styles to blocks.
-  - (Optional) Reference [list of useful TEC styling selectors](<https://github.com/mrwweb/wordpress-block-editor-theme-support-starter/blob/master/third-party-blocks/the-events-calendar-front-end-blocks.css>) as starting point.
+  - (Optional) Reference [list of useful TEC styling selectors](<https://github.com/mrwweb/wordpress-block-editor-theme-support-starter/blob/master/third-party-blocks/the-events-calendar-front-end-blocks.css>) as starting point (slightly outdated as of August 28, 2023).
 
 ### Template Overrides
 
 TEC provides a powerful system to override various plugin templates like the page-level templates all the way down to a specific block. Most sites will need to customize multiple templates for best results.
 
-- [ ] Copy and customize BOTH `default-template.php` files into theme folders
-  - [ ] `/tribe/events/v2/default-template.php` - Used for new Month, List, Day, etc. views
+- [ ] Copy and customize `/tribe/events/v2/default-template.php` into `/{theme}/tribe/events/v2/`
 - [ ] Clean up one or both single event templates:
-  - Classic Editor Events: `single-event.php`
-  - Block Editor Events: `single-event-blocks.php`
+  - Classic Editor Events: `/{theme}/tribe-events/single-event.php`
+  - Block Editor Events: `/{theme}/tribe/events/single-event-blocks.php`
 - [ ] Customize additional templates as needed. Recommended accessibility fixes to templates:
-  - [ ] `tribe/events/v2/list/event.php` - Datetime should follow the event's title heading for logical structure
-  - [ ] `tribe/events/v2/latest-past/event.php` - Datetime should follow the event's title heading for logical structure
-  - [ ] `tribe/events/blocks/event-datetime.php` - Don't use a Heading 2 for logical heading structure on single events
-  - [ ] `tribe/events/v2/list/event/feature-image.php` - Apply `aria-hidden="true"` to featured image link since it's redundant with the event title link in list view
+  - [ ] `/{theme}/tribe/events/v2/list/event.php` - Datetime should follow the event's title heading for logical structure
+  - [ ] `/{theme}/tribe/events/v2/latest-past/event.php` - Datetime should follow the event's title heading for logical structure
+  - [ ] `/{theme}/tribe/events/blocks/event-datetime.php` - Don't use a Heading 2 for logical heading structure on single events
+  - [ ] `/{theme}/tribe/events/v2/list/event/feature-image.php` - Apply `aria-hidden="true"` to featured image link since it's redundant with the event title link in list view
 
 ### Optional Plugins
 
 - [ ] Fix a few things about event pages and [set a custom default block template](https://support.theeventscalendar.com/807454-Change-the-Default-Event-Template-in-Block-Editor) with mu-plugin in `mu-plugins/tec-customizations.php` in this repository
-  - Customize the default block fora new Event with the `tribe_events_editor_default_template` filter. See `/example-block-templates/` for examples of block templates of various complexity
+  - Customize the default block for a new Event with the `tribe_events_editor_default_template` filter. See `/example-block-templates/` for examples of block templates of various complexity
 - [ ] Install [Post Type Archive Descriptions](https://wordpress.org/plugins/post-type-archive-descriptions/) for an editable area at the top of the main events page
 - [ ] Explore [additional TEC extensions](https://theeventscalendar.com/?s=&submit=&match%5Btribe_ecp_product_links%5D%5B%5D=the-events-calendar&post_type%5B%5D=tribe-extensions) for customizations (e.g., hide past events, ["tweaks" plugin](https://theeventscalendar.com/extensions/the-events-calendar-tweaks/), etc.)
 
