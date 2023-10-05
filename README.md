@@ -1,7 +1,7 @@
 # The Events Calendar v2 Template Reset & Customization Guide
 
-Version: 2.0.2!
-[Changelog](#changlog)
+Version: 2.1.0!
+[Changelog](#changelog)
 
 [Feeback encouraged!](https://mrwweb.com/contact/)
 
@@ -74,7 +74,14 @@ add_action( 'tribe_template_before_include:events/v2/components/events-bar/views
 - [Using Template Filters and Actions on TheEventsCalendar.com](https://theeventscalendar.com/knowledgebase/k/using-template-filters-and-actions/)
 - [Template Hooks on TheEventsCalendar.com](https://theeventscalendar.com/knowledgebase/k/template-hooks/)
 
-## Changlog
+## Changelog
+
+### 2.1.0 (October 5, 2023)
+
+- Remove `post_tag` taxonomy from events and don't know tribe_events posts in Tag archives
+- Add new custom properties in attempt to prevent "flash of TEC blue" links and buttons
+- Change the organizer link text to the organizer's name
+- Ensure Subscribe button menu appears above other stuff
 
 ### 2.0.2 (June 7, 2023)
 

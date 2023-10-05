@@ -2,7 +2,7 @@
 /*
 Plugin Name: The Events Calendar Customizations
 Description: An assortment of changes to how The Events Calendar behaves. You are encouraged to delete, add, and revise this file to meet your needs!
-Version: 2.0.2
+Version: 2.1.0
 Author: Mark Root-Wiley, MRW Web Design
 Author URI: https://MRWweb.com
 Plugin URI: https://github.com/mrwweb/the-events-calendar-reset
