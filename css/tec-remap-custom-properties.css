@@ -40,8 +40,6 @@ body {
     --tec-color-accent-secondary-active: rgba(20, 24, 39, .9);
     --tec-color-accent-secondary-background: rgba(20, 24, 39, .07);
 
-    --tec-color-link-accent-hover: rgba(51, 74, 255, .8);
-
     --tec-color-background-events: transparent;
     --tec-color-background-transparent: hsla(0, 0%, 100%, .6);
     --tec-color-background-secondary: #f7f6f6;
