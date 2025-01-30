@@ -130,10 +130,12 @@ add_filter( 'get_the_archive_title', __NAMESPACE__ . '\archive_title' );
 function archive_title( $title ) {
     if( 'tribe_events' === get_post_type() ) {
 
-        if( $_GET['eventDisplay'] ?? '' === 'past' ) {
+        if( tribe_is_past() || ( $_GET['eventDisplay'] ?? '' ) === 'past' ) {
             $title = 'Past Events';
-        } else {
-            $title = 'Upcoming Events';
+        } elseif ( tribe_is_upcoming() ) {
+			$title = 'Upcoming Events';
+		} else {
+			$title = "Events";
         }
 
     }
