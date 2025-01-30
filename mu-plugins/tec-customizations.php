@@ -96,6 +96,15 @@ function default_blocks( $template ) {
 		[ 'tribe/event-website' ],
 		[ 'tribe/event-venue' ],
 	];
+	/* 
+	Alternatively, you can use a theme pattern!
+	$template = array( array(
+        'core/pattern',
+        array(
+            'slug' => 'eec/default-tribe_events',
+        ),
+    ) );
+	*/
 	return $template;
 }
 
