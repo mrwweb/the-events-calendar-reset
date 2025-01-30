@@ -1,6 +1,6 @@
 # The Events Calendar v2 Template Reset & Customization Guide
 
-Version: 2.1.0!
+Version: 2.2.0!
 [Changelog](#changelog)
 
 [Feeback encouraged!](https://mrwweb.com/contact/)
@@ -75,6 +75,13 @@ add_action( 'tribe_template_before_include:events/v2/components/events-bar/views
 - [Template Hooks on TheEventsCalendar.com](https://theeventscalendar.com/knowledgebase/k/template-hooks/)
 
 ## Changelog
+
+### 2.2.0 (January 30, 2025)
+
+- Add snippet in mu-plugin to remove AJAX navigation functions in TEC
+- Add example of using a Block Pattern for the default Event post template
+- Improve event page archive titles
+- Add some new selectors to reset padding and inherit values
 
 ### 2.1.0 (October 5, 2023)
 
