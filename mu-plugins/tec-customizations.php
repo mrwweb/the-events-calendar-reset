@@ -130,6 +130,16 @@ function tribe_past_reverse_chronological_v2( $template_vars ) {
 	return $template_vars;
 }
 
+add_filter( 'tribe_template_html', __NAMESPACE__ . '\prevent_ajax_page_loads', 10, 4 );
+/**
+ * Prevent AJAX page loads by removing the data-js attribute that triggers them
+ * 
+ * Due to the number of changes required via PHP templates and filters (Category filters, archive titles, etc.), the AJAX page loads cause more problems than they solve
+ */
+function prevent_ajax_page_loads( $html, $file, $name, $template ) {
+	return str_replace( 'data-js="tribe-events-view-link"', '', $html );
+}
+
 add_filter( 'get_the_archive_title', __NAMESPACE__ . '\archive_title' );
 /**
  * Change "Events" to "Upcoming Events"/"Past Events" for List/Month/Day page
