@@ -1,6 +1,6 @@
 /**
  * The Events Calendar v2 Design Style Resets & Fixes
- * Version: 2.1.0
+ * Version: 2.2.0
  * Details: https: //github.com/mrwweb/the-events-calendar-reset
  *
  * # How to use this file
@@ -18,8 +18,11 @@ body {
 }
 
 /* Remove Excessive extra padding */
+#tribe-events-pg-template,
+.tribe-common,
+.tribe-common-l-container,
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
-	padding: 0;
+	padding: 0 !important;
 }
 
 /* Reset Font Size & Line-height */
@@ -110,6 +113,7 @@ h2.tribe-events-schedule__datetime,
 	border-color: var(--tec-color-background-messages, #bbb);
 	border-radius: var(--tec-border-radius-default, 0px);
 	color: var(--wp--preset--color--contrast, #000);
+	text-shadow: none;
 }
 
 /**
@@ -192,7 +196,10 @@ h2.tribe-events-schedule__datetime,
 .tribe-events-content a:visited,
 .tribe-common a:visited,
 #tribe-events-content a:visited,
-.tribe-common .tribe-common-c-svgicon:visited {
+.tribe-common .tribe-common-c-svgicon:visited,
+.tribe-embed a,
+.tribe-events-event-meta a,
+.tribe-events-single a {
 	text-decoration: underline;
 }
 
@@ -248,6 +255,16 @@ h2.tribe-events-schedule__datetime,
 	position: absolute;
 	z-index: 999;
 }
+.single-tribe_events
+	.tribe-events
+	.tribe-events-c-subscribe-dropdown__container,
+.tribe-block__events-link
+	.tribe-events
+	.tribe-events-c-subscribe-dropdown__container,
+.single-tribe_events .tribe-events-c-subscribe-dropdown__button,
+.tribe-block__events-link .tribe-events-c-subscribe-dropdown__button {
+	width: auto;
+}
 
 /**
  * List View
@@ -265,7 +282,17 @@ h2.tribe-events-schedule__datetime,
 /**
  * Month View
  */
-/* Don't show disabled paging links */
+/* Don't show [disabled] paging links */
 .tribe-events-c-nav__list [disabled] {
 	display: none;
+}
+
+/* Make the date tag a square */
+.tribe-events-calendar-list__event-date-tag {
+	align-self: flex-start;
+	aspect-ratio: 1;
+}
+.tribe-events .tribe-events-calendar-list__event-date-tag-datetime {
+	justify-content: center;
+	padding-block-start: 0;
 }
