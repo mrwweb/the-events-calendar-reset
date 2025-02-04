@@ -270,6 +270,12 @@ h2.tribe-events-schedule__datetime,
  * List View
  */
 
+/* Correct space for search icon in header */
+.tribe-common--breakpoint-medium.tribe-common
+	.tribe-common-form-control-text__input {
+	padding-left: 48px;
+}
+
 /* Fix Featured Things That Should Have Accent Color */
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-latest-past__event-datetime-featured-text {
 	color: var(--tec-color-accent-primary);
