@@ -1,6 +1,6 @@
 # The Events Calendar v2 Template Reset & Customization Guide
 
-Version: 2.2.0!
+Version: 2.2.1!
 [Changelog](#changelog)
 
 [Feeback encouraged!](https://mrwweb.com/contact/)
@@ -69,12 +69,26 @@ add_action( 'tribe_template_before_include:events/v2/components/events-bar/views
 }, 10, 3 );
 ```
 
+## Helpful Extensions
+
+There are a number of [free "extensions"](https://theeventscalendar.com/extensions/) that make small tweaks to The Events Calendar. A few of these are even redundant with changes in the mu-plugin for this repo. Here are the most useful:
+
+- [Template Inspector](https://theeventscalendar.com/extensions/calendar-template-inspector/) - Great for use in finding which filters you need from the prior section)
+- [Make venue name link to venue URL](https://theeventscalendar.com/extensions/make-venue-names-link-to-the-venue-website-url/)
+- [Make organizer name link to organizer URL](https://theeventscalendar.com/extensions/make-organizer-names-link-to-organizer-website-urls/)
+
 ### References
 
 - [Using Template Filters and Actions on TheEventsCalendar.com](https://theeventscalendar.com/knowledgebase/k/using-template-filters-and-actions/)
 - [Template Hooks on TheEventsCalendar.com](https://theeventscalendar.com/knowledgebase/k/template-hooks/)
 
 ## Changelog
+
+### 2.2.1 (March 14, 2025)
+
+- Rename, simplify, _and_ improve the is_tec_view() function (formerly is_tribe_view())
+- Add note about free extensions
+- Explicit namespaces in mu-plugin
 
 ### 2.2.0 (January 30 - February 4, 2025)
 
