@@ -88,7 +88,13 @@ h2.tribe-events-schedule__datetime,
 .tribe-common .tribe-common-h8,
 .tribe-events-calendar-latest-past__event-datetime,
 .tribe-events-calendar-list__event-datetime,
-.tribe-events-meta-group .tribe-events-single-section-title {
+.tribe-events-meta-group .tribe-events-single-section-title,
+.tribe-common h1,
+.tribe-common h2,
+.tribe-common h3,
+.tribe-common h4,
+.tribe-common h5,
+.tribe-common h6 {
 	font-family: var(--tec-heading-font);
 	font-weight: var(--tec-heading-weight);
 }
