@@ -11,11 +11,11 @@ Plugin URI: https://github.com/mrwweb/the-events-calendar-reset
 namespace MRW\TEC;
 
 /**
- * Useful helper function to detect Tribe Events pages in your theme
+ * Useful helper function to detect Events pages in your theme
  *
  * Modified slightly from the link
  *
- * Usage: \MRW\TEC\is_tribe_view()
+ * Usage: \MRW\TEC\is_tec_view()
  *
  * @link https://gist.github.com/samkent/b98bd3c9b28426b8461bc1417adf7b5d
  */
@@ -29,7 +29,9 @@ function is_tec_view() {
 			\tribe_is_event() ||
 			\tribe_is_event_category() ||
 			\tribe_is_in_main_loop() ||
-			\tribe_is_event_series( get_the_ID() )
+			(
+				function_exists( 'tribe_is_event_series' ) && \tribe_is_event_series( get_the_ID() )
+			)
 		);
 }
 
