@@ -143,7 +143,7 @@ function prevent_ajax_page_loads( $html, $file, $name, $template ) {
 function archive_title( $title ) {
     if( 'tribe_events' === \get_post_type() ) {
 
-        if( \tribe_is_past() || ( $_GET['eventDisplay'] ?? '' ) === 'past' ) {
+        if( \tribe_is_past() || esc_attr( $_GET['eventDisplay'] ?? '' ) === 'past' ) {
             $title = 'Past Events';
         } elseif ( \tribe_is_upcoming() ) {
 			$title = 'Upcoming Events';
